@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "work_sans";
+    src: url(../../font/work_sans/WorkSans-VariableFont_wght.ttf);
+    font-weight: 100 900;
+}
+
+:root {
+    font-size: 10px;
+    --black_shd: rgba(0, 0, 0, 1);
+    --red_shd: rgba(225, 53, 53, 1);
+    --blue_shd: rgba(54, 117, 176, 1);
+    --green_sdv: rgba(41, 167, 30, 1);
+    --black: rgba(0, 0, 0, 1);
+    --red: rgba(225, 53, 53, 1);
+    --blue: rgba(54, 117, 176, 1);
+    --green: rgba(41, 167, 30, 1);
+    --white_bg: rgba(255, 255, 255, 1);
+    --bg_all: rgba(255, 176, 132, 1);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container_grid {
+    width: 755px;
+    /*height: 459px;*/
+    background-color: var(--bg_all);
+    margin: auto;
+    padding: 2.7rem 4.5rem 3.3rem 4.1rem;
+    border-radius: 2rem;
+}
+
+.content_info {
+    display: grid;
+    grid-template-columns: 250px 189px 189px;
+    gap: 1.8rem 2.2rem;
+    font-family: "work_sans";
+
+
+    align-items: start;
+    grid-template-areas:
+        "name bio bio"
+        "name goals frustrations"
+        "text dream personality";/**/
+    grid-template-rows: auto auto auto;
+}
+
+.content_info [class$="grid"] {
+    border-radius: 2rem;
+    background-color: var(--white_bg);
+}
+
+.name_grid {
+    /*height: 319px;
+    width: 250px;*/
+    padding: 1.5rem 2.5rem;
+    box-shadow: 7px 7px 0 var(--black_shd);
+    grid-area: name;
+}
+
+.name_grid h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--black);
+    margin: 0;
+    text-align: center;
+}
+
+.name_grid .img_john {
+    margin-bottom: 17px;
+    margin-top: 17px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 101px;
+    max-height: 101px;
+    border-radius: 50px;
+
+    img {
+        display: inline-block;
+        width: 101px;
+        height: 101px;
+        border-radius: 50px;
+    }
+}
+
+.name_grid p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 14px;
+    color: var(--black);
+
+    span {
+        font-weight: 400;
+        color: var(--black);
+    }
+}
+
+.name_grid p:nth-child(3) {
+    display: inline;
+}
+
+.name_grid p:nth-child(4) {
+    margin-left: 15px;
+    display: inline-block;
+    margin-bottom: 17px;
+}
+
+.name_grid p:last-of-type {
+    margin-bottom: 0;
+}
+
+.bio_grid {
+    /*height: 117px;
+    width: 400px;*/
+    padding: 1.5rem 2.5rem;
+    box-shadow: 7px 7px 0 var(--black_shd);
+    grid-area: bio;
+}
+
+.bio_grid h4 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0;
+    color: var(--black);
+}
+
+.bio_grid p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    color: var(--black);
+}
+
+.text_grid {
+    /*height: 62px;
+    width: 250px;
+    margin-top: auto;*/
+    padding: 1.5rem 2.5rem;
+    box-shadow: 7px 7px 0 var(--black_shd);
+    grid-area: text;
+}
+
+.text_grid p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0
+}
+
+.goals_grid {
+    /*height: 101px;
+    width: 189px;*/
+    padding: 1.5rem 2.5rem;
+    box-shadow: 7px 7px 0 var(--green_sdv);
+    grid-area: goals;
+}
+
+.goals_grid h4 {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.goals_grid ul {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 7px;
+    padding-left: 23px;
+    color: var(--black);
+}
+
+.frustrations_grid {
+    /*width: 189px;
+    height: 165px;*/
+    padding: 1.5rem 2.5rem;
+    box-shadow: 7px 7px 0 var(--red);
+    grid-area: frustrations;
+}
+
+.frustrations_grid h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--red);
+    margin: 0;
+}
+
+.frustrations_grid ul {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    padding-left: 21px;
+}
+
+.dream_companies_grid {
+    /*height: 151px;
+    width: 189px;*/
+    padding: 1.5rem 2.5rem;
+    box-shadow: 7px 7px 0 var(--blue_shd);
+    grid-area: dream;
+    /*position: relative;
+    top: -86px;*/
+}
+
+.dream_companies_grid h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.dream_companies_grid ul {
+    margin: 0;
+    margin-top: 7px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    padding-left: 22px;
+}
+
+.personality_grid {
+    /*width: 189px;
+    height: 89px;*/
+    box-shadow: 7px 7px 0 var(--black_shd);
+    padding: 1.5rem 2.5rem;
+    grid-area: personality;
+}
+
+.personality_grid h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--black);
+    margin-bottom: 7px;
+}
+
+.personality_grid span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+/*сделать сетку в большее кол-во столбчиков*/
